@@ -1,0 +1,2 @@
+ClassName,Test Case Name,Status,Test Case Description,Module Name,Suite Name,Operating System,Browser,Build No,Time in Seconds
+com.ceiwc.compugain.testcases.BankingServicesTest,AT_Verify_AddCustomerDetails,N,Adding a customer,Add user-,CEIWC Execution,windows 7,chrome,null,75.196

@@ -1,0 +1,3 @@
+ClassName,Test Case Name,Status,Test Case Description,Module Name,Suite Name,Operating System,Browser,Build No,Time in Seconds
+com.ceiwc.compugain.testcases.BankingServicesTest,AT_Verify_mandatoryfieldswarningmessage,N,Warning Message when Creating user,Error Messages-,CEIWC Execution,windows 7,chrome,null,41.791
+com.ceiwc.compugain.testcases.BankingServicesTest,AT_Verify_Searchforcreateduser,N,Search for a user,Search User-,CEIWC Execution,windows 7,chrome,null,127.578
