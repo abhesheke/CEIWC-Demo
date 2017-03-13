@@ -7,6 +7,8 @@ import java.util.ResourceBundle;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.ceiwc.compugain.Exception.CustomReport;
@@ -28,20 +30,21 @@ public class OTRSTestCases extends TestBase{
 	private ResourceBundle bundle;
 	private Locale locale;
 	private static Logger logger = Logger.getLogger(OTRSTestCases.class);
-
+	private static final String sbrowser="chrome";
+	
 	@BeforeClass
 	public void beforeClass(){
 		locale = new Locale("en");
 		bundle = ResourceBundle.getBundle("ResourceBundle.BundleFile", locale);
 	}
-
+	@Parameters("sbrowser")
 	@Test(priority=1,description="Create an Account in OTRS and verify Information Message")
-	public void AT_Verify_createAccountWarningMessage(){
+	public void AT_Verify_createAccountWarningMessage(@Optional(sbrowser)String sbrowser){
 
 		String sTestcaseName = new Object(){}.getClass().getEnclosingMethod().getName();
 		CustomReport customReport=new CustomReport();
 		ArrayList<String> statusValue=new ArrayList<String>();
-		WebDriver driver=initializeDriver(SBROWSER);
+		WebDriver driver=initializeDriver(sbrowser);
 		launchURL(OTRSApplicationURL,driver);
 		BasePage basePage=new BasePage();
 		OTRSLoginPage otrsLoginPage=basePage.otrsLoginPage(driver, customReport, basePage);
@@ -60,13 +63,13 @@ public class OTRSTestCases extends TestBase{
 		customReport.checkinglist(statusValue);
 		browserQuit(driver);
 	}
-
+	@Parameters("sbrowser")
 	@Test(priority=2,description="Verify Mandatory Field warning message text")
-	public void AT_Verify_createAccountMandatoryWarningMessage(){
+	public void AT_Verify_createAccountMandatoryWarningMessage(@Optional(sbrowser)String sbrowser){
 		String sTestcaseName = new Object(){}.getClass().getEnclosingMethod().getName();
 		CustomReport customReport=new CustomReport();
 		ArrayList<String> statusValue=new ArrayList<String>();
-		WebDriver driver=initializeDriver(SBROWSER);
+		WebDriver driver=initializeDriver(sbrowser);
 		launchURL(OTRSApplicationURL,driver);
 		BasePage basePage=new BasePage();
 		OTRSLoginPage otrsLoginPage=basePage.otrsLoginPage(driver, customReport, basePage);
@@ -81,15 +84,15 @@ public class OTRSTestCases extends TestBase{
 		customReport.checkinglist(statusValue);
 		browserQuit(driver);
 	}
-
+	@Parameters("sbrowser")
 	@Test(priority=4,description="Change Language from preferences")
-	public void AT_Verify_ChangeLanguageTest(){
+	public void AT_Verify_ChangeLanguageTest(@Optional(sbrowser)String sbrowser){
 
 
 		String sTestcaseName = new Object(){}.getClass().getEnclosingMethod().getName();
 		CustomReport customReport=new CustomReport();
 		ArrayList<String> statusValue=new ArrayList<String>();
-		WebDriver driver=initializeDriver(SBROWSER);
+		WebDriver driver=initializeDriver(sbrowser);
 		launchURL(OTRSApplicationURL,driver);
 		BasePage basePage=new BasePage();
 		OTRSLoginPage otrsLoginPage=basePage.otrsLoginPage(driver, customReport, basePage);
@@ -104,13 +107,13 @@ public class OTRSTestCases extends TestBase{
 		browserQuit(driver);
 	}
 
-
+	@Parameters("sbrowser")
 	@Test(priority=3,description="Search for ticket in OTRS Application")
-	public void AT_verify_SearchTickets(){
+	public void AT_verify_SearchTickets(@Optional(sbrowser)String sbrowser){
 		String sTestcaseName = new Object(){}.getClass().getEnclosingMethod().getName();
 		CustomReport customReport=new CustomReport();
 		ArrayList<String> statusValue=new ArrayList<String>();
-		WebDriver driver=initializeDriver(SBROWSER);
+		WebDriver driver=initializeDriver(sbrowser);
 		launchURL(OTRSApplicationURL,driver);
 		BasePage basePage=new BasePage();
 		OTRSLoginPage otrsLoginPage=basePage.otrsLoginPage(driver, customReport, basePage);
@@ -128,13 +131,13 @@ public class OTRSTestCases extends TestBase{
 
 	}
 
-
+	@Parameters("sbrowser")
 	@Test(priority=5,description="Search for Invalid ticket in Customer OTRS Application")
-	public void AT_Verify_CustomerSearchTicket(){
+	public void AT_Verify_CustomerSearchTicket(@Optional(sbrowser)String sbrowser){
 		String sTestcaseName = new Object(){}.getClass().getEnclosingMethod().getName();
 		CustomReport customReport=new CustomReport();
 		ArrayList<String> statusValue=new ArrayList<String>();
-		WebDriver driver=initializeDriver(SBROWSER);
+		WebDriver driver=initializeDriver(sbrowser);
 		launchURL(CustomerApplicationURL,driver);
 		BasePage basePage=new BasePage();
 		OTRSLoginPage otrsLoginPage=basePage.otrsLoginPage(driver, customReport, basePage);
@@ -149,12 +152,13 @@ public class OTRSTestCases extends TestBase{
 		
 	}
 	
+	@Parameters("sbrowser")
 	@Test(priority=6,description="Search for valid ticket in Customer OTRS Application")
-	public void AT_Verify_CustomerClosedTicketSearch(){
+	public void AT_Verify_CustomerClosedTicketSearch(@Optional(sbrowser)String sbrowser){
 		String sTestcaseName = new Object(){}.getClass().getEnclosingMethod().getName();
 		CustomReport customReport=new CustomReport();
 		ArrayList<String> statusValue=new ArrayList<String>();
-		WebDriver driver=initializeDriver(SBROWSER);
+		WebDriver driver=initializeDriver(sbrowser);
 		launchURL(CustomerApplicationURL,driver);
 		BasePage basePage=new BasePage();
 		OTRSLoginPage otrsLoginPage=basePage.otrsLoginPage(driver, customReport, basePage);
