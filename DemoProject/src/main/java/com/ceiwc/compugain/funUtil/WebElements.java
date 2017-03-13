@@ -680,7 +680,7 @@ public abstract class WebElements extends WaitForElements implements Setup  {
 		 */
 		public void enterText(By locator, 
 				String stextValue) {
-			highLight_perform(locator);
+			//highLight_perform(locator);
 			if (waitForElementPresent(locator)) {
 				driver.findElement(locator).clear();
 				driver.findElement(locator).sendKeys(stextValue);
@@ -1028,6 +1028,7 @@ public abstract class WebElements extends WaitForElements implements Setup  {
 		 */
 
 		public String getText(By locator) {
+			highLight_verify(locator);
 			String sText = "";
 			if (waitForElementPresent(locator)) {
 				sText = driver.findElement(locator).getText();

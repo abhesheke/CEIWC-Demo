@@ -239,7 +239,7 @@ public class  SendMail implements Setup
 		String fourthpart="";
 		firstpart= "<html><body>"+body.toString()+
 				"+<table style="+"width:50% border=6"+">"+
-				"<th colspan =10>"+"Rev-Execution Report</th>"+
+				"<th colspan =10>"+"CEIWC-Execution Report</th>"+
 				"<tr>"+"<b><Center><td>Browser</td>"+
 				"<td>Total Cases</td>"+
 				"<td>#Passed</td>"+

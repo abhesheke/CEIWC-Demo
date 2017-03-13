@@ -145,5 +145,11 @@ public interface Setup extends DeviceSetup{
     public static boolean sanityrunstatus=false;
     public static String USERCREATION="true";
     public final String FIREFOXPATH ="/src/test/resources/Browsers_Binaries/Firefox/geckodriver.exe"; 
+    public final String OTRSApplicationURL="http://172.24.2.39/index.pl";
+    public final String OTRSUserName="Jabesh.kurapati";
+    public final String OTRSPassword="welcome123";
+    public final String CustomerApplicationURL="http://172.24.2.39/users.pl";
+    public final String customerUserName="aabhesheke";
+    public final String customerPassword="Roopa@123";
     
 }

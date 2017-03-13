@@ -19,8 +19,10 @@ import org.apache.log4j.Logger;
 import org.apache.poi.ss.usermodel.DateUtil;
 
 import com.ceiwc.compugain.dao.CreateCustomerBean;
+import com.ceiwc.compugain.dao.OTRSAddCustomerBean;
 import com.ceiwc.compugain.funUtil.DateTime;
 import com.ceiwc.compugain.setup.Setup;
+import com.sun.jna.platform.win32.WinRas.RASTUNNELENDPOINT;
 
 
 public  class BeanFactory implements Setup{
@@ -41,6 +43,14 @@ public  class BeanFactory implements Setup{
 		
 	}
 	
+	
+	public void createOTRSCustomer(OTRSAddCustomerBean otrsAddCustomerBean) {
+		otrsAddCustomerBean.setFirstName(RandomStringUtils.randomAlphabetic(5));
+		otrsAddCustomerBean.setLastName(RandomStringUtils.randomAlphabetic(5));
+		otrsAddCustomerBean.setUserName(RandomStringUtils.randomAlphabetic(5));
+		otrsAddCustomerBean.setEmail(RandomStringUtils.randomAlphabetic(5)+"@mailinator.com");
+		otrsAddCustomerBean.setCustomerID(RandomStringUtils.randomAlphabetic(5));
+	}
 	
 	
 /*	public void createChildAccountBeans(CreateChildAccountBeansPage beansPage) {

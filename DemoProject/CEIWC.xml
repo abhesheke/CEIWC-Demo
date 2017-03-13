@@ -9,7 +9,8 @@
 	<test name="Executionon Chrome">
 		<parameter name="sbrowser" value="chrome" />
 		<classes>
-			<class name="com.ceiwc.compugain.testcases.BankingServicesTest">
+			<!-- <class name="com.ceiwc.compugain.testcases.BankingServicesTest"> -->
+			<class name="com.ceiwc.compugain.testcases.OTRSTestCases">
 			</class>
 		</classes>
 	</test>
