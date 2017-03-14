@@ -27,6 +27,7 @@ public class OTRSCustomersPage extends WebElements{
 	
 	public OTRSAddCustomersPage clickAddCustomers(){
 		click(addCustomerLocator);
+		customReport.reporter("Clicked New Customer option", "");
 		return basePage.otrsAddCustomersPage(driver, customReport, basePage);
 	}
 }

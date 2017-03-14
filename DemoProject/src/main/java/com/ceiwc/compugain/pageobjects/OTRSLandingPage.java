@@ -29,16 +29,19 @@ public class OTRSLandingPage extends WebElements{
 	
 	public OTRSCustomersPage clickCustomers(){
 		click(cutsomersLocator);
+		customReport.reporter("Customer Option Clicked", "");
 		return basePage.otrsCustomerspage(driver, customReport, basePage);
 	}
 
 	public OTRSEditYourPreferencesPage clickEditPersonalPreferences(){
 		click(editpersonalPreferencesLocator);
+		customReport.reporter("Clicked Edit Personal Preferences", "");
 		return basePage.otrsEditYourPreferencesPage(driver, customReport, basePage);
 	}
 
 	public OTRSTicketsPage clickTickets(){
 		click(ticketsLocator);
+		customReport.reporter("Clicked Tickets option", "");
 		return basePage.otrsticketspage(driver, customReport, basePage);
 	}
 	
@@ -46,6 +49,7 @@ public class OTRSLandingPage extends WebElements{
 	
 	public CustomerSearchPage clickCustomerUISearch(){
 		click(customerUISearchLocator);
+		customReport.reporter("Clicked Ticket search option", "");
 		return basePage.customersearchpage(driver, customReport, basePage);
 	}
 

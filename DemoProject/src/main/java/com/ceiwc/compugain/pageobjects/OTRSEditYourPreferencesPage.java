@@ -26,11 +26,13 @@ public class OTRSEditYourPreferencesPage extends WebElements{
 	public void selectLanguage(String drpoption){
 		
 		selectValuefromDropDown(lanLocator, drpoption);
+		customReport.reporter("Language Value Selected", drpoption);
 	}
 	
 	
 	public void clicklanUpdateOption(){
 		click(lanUpdatelocator);
+		customReport.reporter("Clicked Language Update option"," ");
 	}
 	
 	public String verifyLanUpdate(){

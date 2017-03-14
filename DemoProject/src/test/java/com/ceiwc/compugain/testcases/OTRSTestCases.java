@@ -45,7 +45,9 @@ public class OTRSTestCases extends TestBase{
 		CustomReport customReport=new CustomReport();
 		ArrayList<String> statusValue=new ArrayList<String>();
 		WebDriver driver=initializeDriver(sbrowser);
+		customReport.reporter("Browser Launched ", sbrowser);
 		launchURL(OTRSApplicationURL,driver);
+		customReport.reporter("URL Entered ", OTRSApplicationURL);
 		BasePage basePage=new BasePage();
 		OTRSLoginPage otrsLoginPage=basePage.otrsLoginPage(driver, customReport, basePage);
 		OTRSLandingPage otrsLandingPage=otrsLoginPage.login(OTRSUserName,OTRSPassword);
@@ -70,7 +72,9 @@ public class OTRSTestCases extends TestBase{
 		CustomReport customReport=new CustomReport();
 		ArrayList<String> statusValue=new ArrayList<String>();
 		WebDriver driver=initializeDriver(sbrowser);
+		customReport.reporter("Browser Launched ", sbrowser);
 		launchURL(OTRSApplicationURL,driver);
+		customReport.reporter("URL Entered ", OTRSApplicationURL);
 		BasePage basePage=new BasePage();
 		OTRSLoginPage otrsLoginPage=basePage.otrsLoginPage(driver, customReport, basePage);
 		OTRSLandingPage otrsLandingPage=otrsLoginPage.login(OTRSUserName,OTRSPassword);
@@ -93,7 +97,9 @@ public class OTRSTestCases extends TestBase{
 		CustomReport customReport=new CustomReport();
 		ArrayList<String> statusValue=new ArrayList<String>();
 		WebDriver driver=initializeDriver(sbrowser);
+		customReport.reporter("Browser Launched ", sbrowser);
 		launchURL(OTRSApplicationURL,driver);
+		customReport.reporter("URL Entered ", OTRSApplicationURL);
 		BasePage basePage=new BasePage();
 		OTRSLoginPage otrsLoginPage=basePage.otrsLoginPage(driver, customReport, basePage);
 		OTRSLandingPage otrsLandingPage=otrsLoginPage.login(OTRSUserName,OTRSPassword);
@@ -114,7 +120,9 @@ public class OTRSTestCases extends TestBase{
 		CustomReport customReport=new CustomReport();
 		ArrayList<String> statusValue=new ArrayList<String>();
 		WebDriver driver=initializeDriver(sbrowser);
+		customReport.reporter("Browser Launched ", sbrowser);
 		launchURL(OTRSApplicationURL,driver);
+		customReport.reporter("URL Entered ", OTRSApplicationURL);
 		BasePage basePage=new BasePage();
 		OTRSLoginPage otrsLoginPage=basePage.otrsLoginPage(driver, customReport, basePage);
 		OTRSLandingPage otrsLandingPage=otrsLoginPage.login(OTRSUserName,OTRSPassword);
@@ -138,10 +146,11 @@ public class OTRSTestCases extends TestBase{
 		CustomReport customReport=new CustomReport();
 		ArrayList<String> statusValue=new ArrayList<String>();
 		WebDriver driver=initializeDriver(sbrowser);
+		customReport.reporter("Browser Launched ", sbrowser);
 		launchURL(CustomerApplicationURL,driver);
+		customReport.reporter("URL Entered ", CustomerApplicationURL);
 		BasePage basePage=new BasePage();
 		OTRSLoginPage otrsLoginPage=basePage.otrsLoginPage(driver, customReport, basePage);
-
 		OTRSLandingPage otrsLandingPage= otrsLoginPage.customerlogin(customerUserName,customerPassword);
 		CustomerSearchPage customerSearchPage=otrsLandingPage.clickCustomerUISearch();
 		customerSearchPage.enterTicketNumber("2017031010000103");;
@@ -159,7 +168,9 @@ public class OTRSTestCases extends TestBase{
 		CustomReport customReport=new CustomReport();
 		ArrayList<String> statusValue=new ArrayList<String>();
 		WebDriver driver=initializeDriver(sbrowser);
+		customReport.reporter("Browser Launched ", sbrowser);
 		launchURL(CustomerApplicationURL,driver);
+		customReport.reporter("URL Entered ", CustomerApplicationURL);
 		BasePage basePage=new BasePage();
 		OTRSLoginPage otrsLoginPage=basePage.otrsLoginPage(driver, customReport, basePage);
 		OTRSLandingPage otrsLandingPage= otrsLoginPage.customerlogin(customerUserName,customerPassword);

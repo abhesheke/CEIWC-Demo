@@ -29,11 +29,13 @@ public class OTRSTicketsPage extends WebElements{
 	
 	public void clickSearchticketoption() {
 		click(searchLocator);
+		customReport.reporter("Search Ticket option cliked", "");
 	}
 	
 	
 	public void enterTicketTNo(){
 		enterText(searchwindowfulltextlocator, "2017031010000103");
+		customReport.reporter("Ticket No Entered","2017031010000103");
 	}
 	
 	public void clickrunsearchoption(){

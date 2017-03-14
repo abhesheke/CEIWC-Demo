@@ -35,26 +35,32 @@ public class OTRSAddCustomersPage extends WebElements{
 	
 	public void enterFirstName(OTRSAddCustomerBean otrsAddCustomerBean){
 		enterText(firstNameLocator, otrsAddCustomerBean.getFirstName());
+		customReport.reporter("First Name Entered", otrsAddCustomerBean.getFirstName());
 	}
 	
 	public void enterLastName(OTRSAddCustomerBean otrsAddCustomerBean){
 		enterText(lastNameLocator, otrsAddCustomerBean.getLastName());
+		customReport.reporter("Last Name Entered", otrsAddCustomerBean.getLastName());
 	}
 	
 	public void enterUserName(OTRSAddCustomerBean otrsAddCustomerBean){
 	enterText(userNameLocator, otrsAddCustomerBean.getUserName());	
+	customReport.reporter("UserName Entered", otrsAddCustomerBean.getUserName());
 	}
 	
 	public void enterEmail(OTRSAddCustomerBean otrsAddCustomerBean){
 		enterText(emailLocator, otrsAddCustomerBean.getEmail());
+		customReport.reporter("Email Entered", otrsAddCustomerBean.getEmail());
 	}
 	
 	public void enterCustomerId(OTRSAddCustomerBean otrsAddCustomerBean) {
 		enterText(customerIdLocator, otrsAddCustomerBean.getCustomerID());
+		customReport.reporter("CustomerID Entered", otrsAddCustomerBean.getCustomerID());
 	}
 	
 	public void clickSubmit(){
 		click(submitButton);
+		customReport.reporter("Submit Option Clicked","");
 	}
 	
 	public String otrsAddNewCustomer(OTRSAddCustomerBean otrsAddCustomerBean) {
