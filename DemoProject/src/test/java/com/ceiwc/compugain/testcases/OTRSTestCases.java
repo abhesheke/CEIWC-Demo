@@ -38,7 +38,7 @@ public class OTRSTestCases extends TestBase{
 		bundle = ResourceBundle.getBundle("ResourceBundle.BundleFile", locale);
 	}
 	@Parameters("sbrowser")
-	@Test(priority=1,description="Create an Account in OTRS and verify Information Message")
+	@Test(priority=1,description="Create an Account in OTRS and verify Information Message",groups="Customer Creation")
 	public void AT_Verify_createAccountWarningMessage(@Optional(sbrowser)String sbrowser){
 
 		String sTestcaseName = new Object(){}.getClass().getEnclosingMethod().getName();
@@ -64,7 +64,7 @@ public class OTRSTestCases extends TestBase{
 		browserQuit(driver);
 	}
 	@Parameters("sbrowser")
-	@Test(priority=2,description="Verify Mandatory Field warning message text")
+	@Test(priority=2,description="Verify Mandatory Field warning message text",groups="Customer Creation")
 	public void AT_Verify_createAccountMandatoryWarningMessage(@Optional(sbrowser)String sbrowser){
 		String sTestcaseName = new Object(){}.getClass().getEnclosingMethod().getName();
 		CustomReport customReport=new CustomReport();
@@ -85,7 +85,7 @@ public class OTRSTestCases extends TestBase{
 		browserQuit(driver);
 	}
 	@Parameters("sbrowser")
-	@Test(priority=4,description="Change Language from preferences")
+	@Test(priority=4,description="Change Language from preferences",groups="Language Settings")
 	public void AT_Verify_ChangeLanguageTest(@Optional(sbrowser)String sbrowser){
 
 
@@ -108,7 +108,7 @@ public class OTRSTestCases extends TestBase{
 	}
 
 	@Parameters("sbrowser")
-	@Test(priority=3,description="Search for ticket in OTRS Application")
+	@Test(priority=3,description="Search for ticket in OTRS Application",groups="Search Ticket")
 	public void AT_verify_SearchTickets(@Optional(sbrowser)String sbrowser){
 		String sTestcaseName = new Object(){}.getClass().getEnclosingMethod().getName();
 		CustomReport customReport=new CustomReport();
@@ -132,7 +132,7 @@ public class OTRSTestCases extends TestBase{
 	}
 
 	@Parameters("sbrowser")
-	@Test(priority=5,description="Search for Invalid ticket in Customer OTRS Application")
+	@Test(priority=5,description="Search for Invalid ticket in Customer OTRS Application",groups="Search Ticket")
 	public void AT_Verify_CustomerSearchTicket(@Optional(sbrowser)String sbrowser){
 		String sTestcaseName = new Object(){}.getClass().getEnclosingMethod().getName();
 		CustomReport customReport=new CustomReport();
@@ -153,7 +153,7 @@ public class OTRSTestCases extends TestBase{
 	}
 	
 	@Parameters("sbrowser")
-	@Test(priority=6,description="Search for valid ticket in Customer OTRS Application")
+	@Test(priority=6,description="Search for valid ticket in Customer OTRS Application",groups="Search Ticket")
 	public void AT_Verify_CustomerClosedTicketSearch(@Optional(sbrowser)String sbrowser){
 		String sTestcaseName = new Object(){}.getClass().getEnclosingMethod().getName();
 		CustomReport customReport=new CustomReport();

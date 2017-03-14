@@ -107,7 +107,7 @@ public class XMLSuiteRunner implements Setup{
 
 		setAttributes("class-name", "org.uncommons.reportng.HTMLReporter", listnerTag1);
 		setAttributes("class-name", "org.uncommons.reportng.JUnitXMLReporter", listnerTag2);
-		setAttributes("class-name", "com.vbrick.avenger.funUtil.CustomReporter", listnerTag3);
+		setAttributes("class-name", "com.ceiwc.compugain.funUtil.CustomReporter", listnerTag3);
 
 		Element testTag=subTag(suiteTag,"test");
 		setAttributes("name",suiteName , testTag);
