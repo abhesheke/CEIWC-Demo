@@ -77,9 +77,9 @@ public class CustomReporter implements IReporter,Setup{
 			csvWritingHeading(",");
 			csvWritingHeading("Browser");
 			csvWritingHeading(",");
-			csvWritingHeading("Build No");
+			/*csvWritingHeading("Build No");
 			csvWritingHeading(",");
-			csvWritingHeading("Time in Seconds");
+			*/csvWritingHeading("Time in Seconds");
 			csvWritingHeading("\n");
 			//BuildNo=SendMail.BuildNumber(Configuration.getAutomationURL());
 			logger.info("THe Build No is"+BuildNo);
@@ -337,9 +337,9 @@ public class CustomReporter implements IReporter,Setup{
 		csvWrite(filewriter,",");
 		csvWrite(filewriter,browser);
 		csvWrite(filewriter,",");
-		csvWrite(filewriter,BuildNo);
+	/*	csvWrite(filewriter,BuildNo);
 		csvWrite(filewriter,",");
-		csvWrite(filewriter,testcaseDuration);
+	*/	csvWrite(filewriter,testcaseDuration);
 		csvWrite(filewriter,"\n");
 	}
 	
