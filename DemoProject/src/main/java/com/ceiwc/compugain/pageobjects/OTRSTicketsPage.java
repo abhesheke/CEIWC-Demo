@@ -28,7 +28,8 @@ public class OTRSTicketsPage extends WebElements{
 	By closedStatusLocator=By.xpath("//*[contains(text(),'closed successful')]");
 	
 	public void clickSearchticketoption() {
-		click(searchLocator);
+		
+		clickusingjavascript(searchLocator);
 		customReport.reporter("Search Ticket option cliked", "");
 	}
 	

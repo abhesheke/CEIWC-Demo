@@ -39,7 +39,7 @@ public interface Setup extends DeviceSetup{
       //File Path for Email Code and Zip Code.
     public final String EMAILCONFIG="/src/main/resources/EmailConfig/EmailConfiguration.properties";
     public final String OUTPUT_ZIP_FILE_REPORTS = "/BackupReports";
-    public final String OUTPUT_ZIP_FILE = OUTPUT_ZIP_FILE_REPORTS +"/Vbricks_Reports.zip";
+    public final String OUTPUT_ZIP_FILE = OUTPUT_ZIP_FILE_REPORTS +"/CEIWC.zip";
     public final String SOURCE_REPORTSFOLDER = "/test-output/html";
     public final String WMVVIDEOSPATH="/src/test/resources/Videos/wave.wmv";
     public final String GAMEVIDEOSPATH="/src/test/resources/Videos/Game.mp4";

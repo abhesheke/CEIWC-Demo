@@ -2,6 +2,7 @@ package com.ceiwc.compugain.testcases;
 
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Properties;
 import java.util.ResourceBundle;
 
 import org.apache.log4j.Logger;
@@ -35,6 +36,8 @@ public class OTRSTestCases extends TestBase{
 	public void beforeClass(){
 		locale = new Locale("en");
 		bundle = ResourceBundle.getBundle("ResourceBundle.BundleFile", locale);
+		Properties props = System.getProperties();
+        props.setProperty("org.uncommons.reportng.title", "CEIWC Automation Report");
 	}
 	@Parameters("sbrowser")
 	@Test(priority=1,description="Create an Account in OTRS and verify Information Message",groups="Customer Creation")
@@ -130,6 +133,7 @@ public class OTRSTestCases extends TestBase{
 		editYourPreferencesPage.selectLanguage(bundle.getString("englanoption"));
 		editYourPreferencesPage.clicklanUpdateOption();
 		OTRSTicketsPage otrsTicketsPage=otrsLandingPage.clickTickets();
+		otrsTicketsPage.pause(2000);
 		otrsTicketsPage.clickSearchticketoption();
 		otrsTicketsPage.enterTicketTNo();
 		otrsTicketsPage.clickrunsearchoption();
@@ -140,7 +144,7 @@ public class OTRSTestCases extends TestBase{
 	}
 
 	@Parameters("sbrowser")
-	//@Test(priority=5,description="Search for Invalid ticket in Customer OTRS Application",groups="Search Ticket")
+	@Test(priority=5,description="Search for Invalid ticket in Customer OTRS Application",groups="Search Ticket")
 	public void AT_Verify_CustomerSearchTicket(@Optional(sbrowser)String sbrowser){
 		String sTestcaseName = new Object(){}.getClass().getEnclosingMethod().getName();
 		CustomReport customReport=new CustomReport();

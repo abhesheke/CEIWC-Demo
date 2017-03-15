@@ -40,7 +40,7 @@ public class OTRSTestCases_Firefox extends TestBase{
         props.setProperty("org.uncommons.reportng.title", "CEIWC Automation Report");
 	}
 	@Parameters("sbrowser")
-	@Test(priority=1,description="Create an Account in OTRS and verify Information Message",groups="Customer Creation")
+	@Test(priority=1,description="Create an Account in OTRS and verify Information Message",groups="Customer Creation_Firefox")
 	public void AT_Verify_createAccountWarningMessage(@Optional(sbrowser)String sbrowser){
 
 		String sTestcaseName = new Object(){}.getClass().getEnclosingMethod().getName();
@@ -71,7 +71,7 @@ public class OTRSTestCases_Firefox extends TestBase{
 
 
 	@Parameters("sbrowser")
-	@Test(priority=6,description="Search for valid ticket in Customer OTRS Application",groups="Search Ticket")
+	@Test(priority=6,description="Search for valid ticket in Customer OTRS Application",groups="Search Ticket_Firefox")
 	public void AT_Verify_CustomerClosedTicketSearch(@Optional(sbrowser)String sbrowser){
 		String sTestcaseName = new Object(){}.getClass().getEnclosingMethod().getName();
 		CustomReport customReport=new CustomReport();

@@ -13,8 +13,11 @@ import java.io.PrintWriter;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -98,8 +101,8 @@ public class CustomReport {
 			j=j+1;
 
 		} else {
-			/*Reasons.reporter("Expected Value " + sExpected + "\n" + "Actual Value"	+ sActual + "::Fail" + AssertionresultOutput(driver,sTestcaseName),"");*/
-			reporter("<font color='red'>"+"Expected Value " + sExpected + "\n" + "Actual Value"	+ sActual + "::Fail"  /*AssertionresultOutput(driver,sTestcaseName)*/+"</font>","");
+		//	reporter("Expected Value " + sExpected + "\n" + "Actual Value"	+ sActual + "::Fail" + AssertionresultOutput(driver,sTestcaseName),"");
+			reporter("<font color='red'>"+"Expected Value " + sExpected + "\n" + "Actual Value"	+ sActual + "::Fail" + AssertionresultOutput(driver,sTestcaseName)+"</font>","");
 			statusValue.add("FAIL");
 			logger.error("*************sTestcaseName"+sTestcaseName+"::::"+"FAILED");
 		}
@@ -305,14 +308,14 @@ public class CustomReport {
 		//	Screenshot 	screenshot = new AShot().shootingStrategy(new ViewportPastingStrategy(1000)).takeScreenshot(driver);
 			//ImageIO.write(screenshot.getImage(), "PNG", new File(sFilepath + sScreenshotName));
 
-		/*	File scrFile = ((TakesScreenshot) driver)
+			File scrFile = ((TakesScreenshot) driver)
 					.getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(scrFile, new File(sFilepath + sScreenshotName));
 			logger.info("SRC FIle Location for ScreenShot" + "::::"
 					+ scrFile.getAbsolutePath());
 			logger.info("The screenshot stored in location" + sFilepath
 					+ sScreenshotName);
-*/
+
 		} catch (Exception e1) {
 			// logger.error("Exception caught in screenshotcreation block");
 			e1.printStackTrace();

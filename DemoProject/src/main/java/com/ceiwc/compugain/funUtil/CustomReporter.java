@@ -19,7 +19,6 @@ import org.testng.Reporter;
 import org.testng.xml.XmlSuite;
 import org.uncommons.reportng.ReportNGUtils;
 
-import com.ceiwc.compugain.setup.Configuration;
 import com.ceiwc.compugain.setup.Setup;
 
 
