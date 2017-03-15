@@ -35,13 +35,14 @@ public   class TestBase implements Setup,Epic_Group,EnviromentAccounts{
 	public WebDriver driver;
 	public WebDriver secondDriver,thirdDriver;
 	public FirefoxProfile profile;
-	public String sUserName,sPassword,sEnvironment,sversion1,sbrowser;
+	public String sUserName,sPassword,sEnvironment,sversion1;
 	public String surl,surlA,surlB,surlC,surlD,surlE,surlF;
 	public static String language="en";
 	private static Logger logger = Logger.getLogger(TestBase.class);
 	private static String versionvalue="";
 	public String DBSTRING=null;
 			
+	protected static final String sbrowser="chrome";
 
 
 

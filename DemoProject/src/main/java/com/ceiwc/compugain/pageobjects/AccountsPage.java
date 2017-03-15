@@ -1,6 +1,5 @@
 package com.ceiwc.compugain.pageobjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.ceiwc.compugain.Exception.CustomReport;

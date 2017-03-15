@@ -653,7 +653,7 @@ public abstract class WebElements extends WaitForElements implements Setup  {
 			      //Execute javascript
 			         js.executeScript("arguments[0].style.border='8px groove red'",  driver.findElement(locator));
 			         try {
-						Thread.sleep(1000);
+						Thread.sleep(500);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
@@ -680,7 +680,7 @@ public abstract class WebElements extends WaitForElements implements Setup  {
 		 */
 		public void enterText(By locator, 
 				String stextValue) {
-			//highLight_perform(locator);
+			highLight_perform(locator);
 			if (waitForElementPresent(locator)) {
 				driver.findElement(locator).clear();
 				driver.findElement(locator).sendKeys(stextValue);

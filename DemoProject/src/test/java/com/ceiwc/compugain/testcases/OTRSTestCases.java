@@ -30,7 +30,6 @@ public class OTRSTestCases extends TestBase{
 	private ResourceBundle bundle;
 	private Locale locale;
 	private static Logger logger = Logger.getLogger(OTRSTestCases.class);
-	private static final String sbrowser="chrome";
 	
 	@BeforeClass
 	public void beforeClass(){
@@ -46,7 +45,8 @@ public class OTRSTestCases extends TestBase{
 		ArrayList<String> statusValue=new ArrayList<String>();
 		WebDriver driver=initializeDriver(sbrowser);
 		customReport.reporter("Browser Launched ", sbrowser);
-		launchURL(OTRSApplicationURL,driver);
+/*		String browservalue=sbrowser;
+*/		launchURL(OTRSApplicationURL,driver);
 		customReport.reporter("URL Entered ", OTRSApplicationURL);
 		BasePage basePage=new BasePage();
 		OTRSLoginPage otrsLoginPage=basePage.otrsLoginPage(driver, customReport, basePage);
@@ -140,7 +140,7 @@ public class OTRSTestCases extends TestBase{
 	}
 
 	@Parameters("sbrowser")
-	@Test(priority=5,description="Search for Invalid ticket in Customer OTRS Application",groups="Search Ticket")
+	//@Test(priority=5,description="Search for Invalid ticket in Customer OTRS Application",groups="Search Ticket")
 	public void AT_Verify_CustomerSearchTicket(@Optional(sbrowser)String sbrowser){
 		String sTestcaseName = new Object(){}.getClass().getEnclosingMethod().getName();
 		CustomReport customReport=new CustomReport();

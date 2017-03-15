@@ -5,7 +5,7 @@
 	<artifactId>AvengerTestAutomation</artifactId>
 	<version>7.14</version>
 	<name>Avenger</name>
-	<description>Avenger Automation</description>
+	<description>CEIWC DEMO</description>
 	<properties>
 		<!--ZAPI Plugin -->
 		<zapi.url>http://jira.vbrick.com/</zapi.url>
@@ -51,8 +51,7 @@
 				<artifactId>doxia-sink-api</artifactId> <version>1.1.2</version> </dependency> 
 				<dependency> <groupId>com.google.inject</groupId> <artifactId>guice</artifactId> 
 				<version>3.0</version> </dependency> </dependencies> </plugin> -->
-
-
+     
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -84,7 +83,7 @@
 						<echo>the suite file name is ${SuiteName} </echo>
 					</property>
 					<suiteXmlFiles>
-						<suiteXmlFile>${SuiteName}</suiteXmlFile>
+						<suiteXmlFile>CEIWC_CrossBrowser.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

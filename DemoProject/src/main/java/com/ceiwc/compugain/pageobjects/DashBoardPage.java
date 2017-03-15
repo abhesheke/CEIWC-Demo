@@ -1,6 +1,5 @@
 package com.ceiwc.compugain.pageobjects;
 
-import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

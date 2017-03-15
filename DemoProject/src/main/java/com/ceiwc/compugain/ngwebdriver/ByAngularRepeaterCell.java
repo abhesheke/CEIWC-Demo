@@ -1,10 +1,10 @@
 package com.ceiwc.compugain.ngwebdriver;
 
+import java.util.List;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
-
-import java.util.List;
 
 public class ByAngularRepeaterCell extends ByAngular.BaseBy {
 

@@ -21,7 +21,6 @@ import org.uncommons.reportng.ReportNGUtils;
 
 import com.ceiwc.compugain.setup.Configuration;
 import com.ceiwc.compugain.setup.Setup;
-import com.ceiwc.compugain.setup.TestBase;
 
 
 public class CustomReporter implements IReporter,Setup{
@@ -335,7 +334,8 @@ public class CustomReporter implements IReporter,Setup{
 	    logger.info("The Operating system is"+OSystem);
 		csvWrite(filewriter,OSystem);
 		csvWrite(filewriter,",");
-		csvWrite(filewriter,browser);
+		//logger.info("The browser is"+Configuration.getAutomationBrowser());
+		csvWrite(filewriter,SBROWSER);
 		csvWrite(filewriter,",");
 	/*	csvWrite(filewriter,BuildNo);
 		csvWrite(filewriter,",");

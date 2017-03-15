@@ -4,25 +4,13 @@ package com.ceiwc.compugain.beansfactory;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
 
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.log4j.Logger;
-import org.apache.poi.ss.usermodel.DateUtil;
 
 import com.ceiwc.compugain.dao.CreateCustomerBean;
 import com.ceiwc.compugain.dao.OTRSAddCustomerBean;
-import com.ceiwc.compugain.funUtil.DateTime;
 import com.ceiwc.compugain.setup.Setup;
-import com.sun.jna.platform.win32.WinRas.RASTUNNELENDPOINT;
 
 
 public  class BeanFactory implements Setup{
@@ -45,11 +33,11 @@ public  class BeanFactory implements Setup{
 	
 	
 	public void createOTRSCustomer(OTRSAddCustomerBean otrsAddCustomerBean) {
-		otrsAddCustomerBean.setFirstName(RandomStringUtils.randomAlphabetic(5));
-		otrsAddCustomerBean.setLastName(RandomStringUtils.randomAlphabetic(5));
-		otrsAddCustomerBean.setUserName(RandomStringUtils.randomAlphabetic(5));
-		otrsAddCustomerBean.setEmail(RandomStringUtils.randomAlphabetic(5)+"@mailinator.com");
-		otrsAddCustomerBean.setCustomerID(RandomStringUtils.randomAlphabetic(5));
+		otrsAddCustomerBean.setFirstName("First Name");
+		otrsAddCustomerBean.setLastName("Last Name");
+		otrsAddCustomerBean.setUserName("UserName");
+		otrsAddCustomerBean.setEmail("Email@compugain.com");
+		otrsAddCustomerBean.setCustomerID("UserName");
 	}
 	
 	

@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import com.ceiwc.compugain.Exception.CustomReport;
 import com.ceiwc.compugain.funUtil.WebElements;
 import com.ceiwc.compugain.setup.BasePage;
-import com.ceiwc.compugain.testcases.OTRSTestCases;
 
 public class OTRSLoginPage extends WebElements{
 
