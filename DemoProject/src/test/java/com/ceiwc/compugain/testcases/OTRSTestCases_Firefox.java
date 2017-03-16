@@ -65,8 +65,9 @@ public class OTRSTestCases_Firefox extends TestBase{
 		String actualWarningMessageText=addCustomersPage.otrsAddNewCustomer(addCustomerBean);;
 		logger.info("Warning Message Text ::::: "+actualWarningMessageText);
 		customReport.customizedReport(true,actualWarningMessageText.contains(bundle.getString("createuserwarningmsg")) , statusValue, driver, sTestcaseName);
-		customReport.checkinglist(statusValue);
 		browserQuit(driver);
+		customReport.checkinglist(statusValue);
+		
 	}
 
 
@@ -87,8 +88,9 @@ public class OTRSTestCases_Firefox extends TestBase{
 		customerSearchPage.enterTicketNumber("2016101910000022");
 		customerSearchPage.clickSearchOption();
 		customReport.customizedReport(bundle.getString("closedticketstatus"), customerSearchPage.checkClosedticketStatus(), statusValue, driver, sTestcaseName);
+		browserQuit(driver);
 		customReport.checkinglist(statusValue);
-		browserQuit(driver);;
+		
 		
 		
 	}

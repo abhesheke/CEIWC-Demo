@@ -65,8 +65,9 @@ public class OTRSTestCases extends TestBase{
 		String actualWarningMessageText=addCustomersPage.otrsAddNewCustomer(addCustomerBean);;
 		logger.info("Warning Message Text ::::: "+actualWarningMessageText);
 		customReport.customizedReport(true,actualWarningMessageText.contains(bundle.getString("createuserwarningmsg")) , statusValue, driver, sTestcaseName);
-		customReport.checkinglist(statusValue);
 		browserQuit(driver);
+		customReport.checkinglist(statusValue);
+		
 	}
 	@Parameters("sbrowser")
 	@Test(priority=2,description="Verify Mandatory Field warning message text",groups="Customer Creation")
@@ -88,8 +89,9 @@ public class OTRSTestCases extends TestBase{
 		OTRSAddCustomersPage addCustomersPage=otrsCustomersPage.clickAddCustomers();
 		addCustomersPage.clickSubmit();
 		customReport.customizedReport(true, addCustomersPage.verifyMandatoryWarningMessage(), statusValue, driver, sTestcaseName);
-		customReport.checkinglist(statusValue);
 		browserQuit(driver);
+		customReport.checkinglist(statusValue);
+		
 	}
 	@Parameters("sbrowser")
 	@Test(priority=4,description="Change Language from preferences",groups="Language Settings")
@@ -112,8 +114,8 @@ public class OTRSTestCases extends TestBase{
 		customReport.customizedReport(bundle.getString("lanchange.txt"), editYourPreferencesPage.verifyLanUpdate(), statusValue, driver, sTestcaseName);
 		editYourPreferencesPage.selectLanguage(bundle.getString("englanoption"));
 		editYourPreferencesPage.clicklanUpdateOption();
-		customReport.checkinglist(statusValue);
 		browserQuit(driver);
+		customReport.checkinglist(statusValue);
 	}
 
 	@Parameters("sbrowser")
@@ -138,8 +140,8 @@ public class OTRSTestCases extends TestBase{
 		otrsTicketsPage.enterTicketTNo();
 		otrsTicketsPage.clickrunsearchoption();
 		customReport.customizedReport(otrsTicketsPage.checkTicketStatus(),bundle.getString("closedticketstatus"), statusValue, driver, sTestcaseName);
-		customReport.checkinglist(statusValue);
 		browserQuit(driver);
+		customReport.checkinglist(statusValue);
 
 	}
 
@@ -160,8 +162,8 @@ public class OTRSTestCases extends TestBase{
 		customerSearchPage.enterTicketNumber("2017031010000103");;
 		customerSearchPage.clickSearchOption();
 		customReport.customizedReport(bundle.getString("emptyticketstatus"), customerSearchPage.checkticketStatus(), statusValue, driver, sTestcaseName);
-		customReport.checkinglist(statusValue);
 		browserQuit(driver);
+		customReport.checkinglist(statusValue);
 		
 	}
 	
@@ -182,8 +184,9 @@ public class OTRSTestCases extends TestBase{
 		customerSearchPage.enterTicketNumber("2016101910000022");
 		customerSearchPage.clickSearchOption();
 		customReport.customizedReport(bundle.getString("closedticketstatus"), customerSearchPage.checkClosedticketStatus(), statusValue, driver, sTestcaseName);
+		browserQuit(driver);
 		customReport.checkinglist(statusValue);
-		browserQuit(driver);;
+		
 		
 		
 	}
